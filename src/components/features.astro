@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Import LinkedIn",
+    description:
+      "Importez votre profil LinkedIn en un clic pour pré-remplir votre CV.",
+    icon: "bx:bxl-linkedin",
+  },
+  {
+    title: "Scoring intelligent",
+    description:
+      "Obtenez un score en temps réel et des conseils pour maximiser votre impact.",
+    icon: "bx:bxs-star",
+  },
+  {
+    title: "Suggestions IA",
+    description:
+      "Formulations optimisées par IA pour chaque section de votre CV.",
+    icon: "bx:bxs-magic-wand",
+  },
+  {
+    title: "Modèles professionnels",
+    description:
+      "Des templates élégants et compatibles ATS, prêts pour le marché français.",
+    icon: "bx:bxs-file-blank",
+  },
+  {
+    title: "Export PDF soigné",
+    description:
+      "Exportez un PDF net et professionnel, prêt à être envoyé.",
+    icon: "bx:bxs-file-pdf",
+  },
+  {
+    title: "Multilingue",
+    description:
+      "Créez votre CV en français et en anglais facilement.",
+    icon: "bx:bxs-flag-alt",
+  },
+];
+---
+<div id="features" class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Tout pour créer un CV gagnant
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    France CV vous accompagne de A à Z: import, optimisation, design et export.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
+
